@@ -1,0 +1,63 @@
+<template>
+  <section class="errer">
+        <h1>404</h1>
+        <h2>not found pages</h2>
+        <footer>
+            ← Back to <router-link :to="{ name: 'Home' }">{{ name }}</router-link>
+        </footer>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "Error",
+  title: "not found",
+    data() {
+        return {
+        name: "Edu Home",
+        };
+    },
+}
+</script>
+
+<style>
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.125rem;
+}
+
+h1 {
+  font-size: 15rem;
+}
+
+footer {
+  margin:auto;
+  margin-top: 5rem;
+  padding: 0.625rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
+  width: 22rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>
